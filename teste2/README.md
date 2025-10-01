@@ -49,24 +49,33 @@ Isso ajuda a deixar o código modular, reaproveitável e cada parte com sua pró
 
 🔹 Componentes criados
 
-App.vue
-É o “pai” da aplicação. Ele orquestra tudo, importando e exibindo os outros componentes.
 
-TodoInput.vue
+### App.vue
+```
+É o “pai” da aplicação. Ele orquestra tudo, importando e exibindo os outros componentes.
+```
+
+
+### TodoInput.vue
+```
 Responsável pela entrada de novas tarefas.
 
 Tem um input e um botão.
 
 Emite eventos pro App.vue sempre que o usuário adiciona algo.
+```
 
-TodoList.vue
+### TodoList.vue
+```
 Lista todas as tarefas já criadas.
 
 Recebe a lista via props.
 
 Renderiza cada item chamando o componente TodoItem.vue.
+```
 
-TodoItem.vue
+### TodoItem.vue
+```
 Representa uma única tarefa.
 
 Mostra o texto.
@@ -74,3 +83,4 @@ Mostra o texto.
 Permite marcar como concluída.
 
 Pode emitir evento pra deletar ou editar o item.
+```
