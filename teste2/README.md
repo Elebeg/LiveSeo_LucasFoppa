@@ -77,10 +77,7 @@ Renderiza cada item chamando o componente TodoItem.vue.
 ### TodoItem.vue
 ```
 Representa uma única tarefa.
-
 Mostra o texto.
-
 Permite marcar como concluída.
-
 Pode emitir evento pra deletar ou editar o item.
 ```
