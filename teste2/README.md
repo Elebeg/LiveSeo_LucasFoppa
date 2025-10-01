@@ -1,30 +1,6 @@
 # teste2
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
-📂 Organização do Código
+## Organização do Código
 
 Organizei o projeto separando cada parte por responsabilidade:
 
@@ -42,7 +18,7 @@ main.js → ponto de entrada que inicializa a aplicação.
 
 Essa separação deixa o código mais limpo, fácil de escalar e manter. Se precisar trocar um pedaço, eu sei exatamente onde ir.
 
-⚙️ Uso do Vue.js
+## Uso do Vue.js
 
 Sim, usei Vue.js e quebrei a aplicação em componentes.
 Isso ajuda a deixar o código modular, reaproveitável e cada parte com sua própria responsabilidade.
