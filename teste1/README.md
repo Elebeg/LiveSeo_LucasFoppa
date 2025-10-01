@@ -1,6 +1,6 @@
-# 📝 Formulário de Cadastro LiveSEO
+# Formulário de Cadastro LiveSEO
 
-## 📁 Organização de Arquivos
+## Organização de Arquivos
 
 Escolhi organizar os arquivos por pastas referente ao seu tipo (html, css e js). Com isso consigo escalar e realizar manutenção no código de forma mais assertiva.
 
@@ -8,7 +8,7 @@ Resolvi fazer um JS simples apenas para interceptar o submit do HTML e fazer alg
 
 ---
 
-## 🏗️ HTML - Estrutura e Semântica
+## HTML - Estrutura e Semântica
 
 ### Estrutura Geral
 - Utilizei tags semânticas apropriadas (`<form>`, `<label>`, `<input>`)
@@ -22,7 +22,8 @@ Resolvi fazer um JS simples apenas para interceptar o submit do HTML e fazer alg
 - **Senha**: `required` + `minlength="8"` + `pattern` para exigir maiúsculas, minúsculas e números
 
 ### Comentários do Código
-```html
+```
+HTML
 <!-- 
 O novalidate desabilita a validação padrão do browser porque vou
 fazer uma validação customizada no JavaScript. Isso me dá mais controle.
@@ -33,29 +34,9 @@ Coloquei logo aqui pra criar identidade e deixar claro
 que é um formulário da LiveSEO
 -->
 
-🎨 CSS - Estilização e Responsividade
-Layout
+CSS 
 
-Flexbox no body para centralizar verticalmente e horizontalmente
-Container com max-width: 450px para garantir legibilidade
-Padding responsivo para mobile
-
-Estados Interativos
-
-:focus: Borda colorida + sombra suave para feedback visual
-:invalid: Borda vermelha quando campo inválido (após interação)
-:valid: Borda verde quando campo válido
-:hover no botão: Elevação com transform e shadow
-
-Sistema de Cores
-Cores semânticas: verde (sucesso), vermelho (erro), roxo (ação)
-Animações e Transições
-
-Mensagens de erro aparecem dinamicamente com display: none → display: block
-Transições suaves (0.3s) em todos os elementos interativos
-
-Comentários do Código
-css/* 
+/* 
 * CONTAINER PRINCIPAL
 * O card branco com sombra cria aquele efeito de "elevação" que deixa o design
 * mais moderno. Limitei a largura em 450px pra não ficar muito largo em telas
@@ -72,17 +53,9 @@ css/*
 * começou a digitar algo. Se o campo tá vazio ainda, não mostro erro.
 */
 
-⚡ JavaScript - Validação Customizada
-Funcionalidades
-Inclui validação customizada que:
+JavaScript 
 
-Previne envio do formulário se inválido
-Foca no primeiro campo inválido
-Exibe mensagens de erro contextuais
-Valida em tempo real após o usuário sair do campo (blur)
-
-Comentários do Código
-javascript/* 
+/* 
 * Adiciono validação quando o usuário sai do campo (chamei de blur o evento)
 * Só valido se o campo não tá vazio, senão fica mostrando erro antes
 * mesmo do usuário começar a digitar
