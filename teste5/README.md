@@ -3,21 +3,18 @@
 ## Estrutura de Arquivos
 
 ```
-src/
-├── main.ts                    # Inicialização da aplicação
-├── app.module.ts              # Módulo raiz
-│
-└── users/                     # Módulo de usuários
-    ├── users.module.ts        # Configuração do módulo
-    ├── users.controller.ts    # Endpoints HTTP
-    ├── users.service.ts       # Regras de negócio
-    │
-    ├── entities/              # Modelos de dados
-    │   └── user.entity.ts     # Entidade User
-    │
-    └── dto/                   # Data Transfer Objects
-        ├── create-user.dto.ts # Validação de criação
-        └── update-user.dto.ts # Validação de atualização
+src/           
+  users/ 
+    dto/                   
+      create-user.dto.ts 
+      update-user.dto.ts   
+    entities/              
+      user.entity.ts                     
+    users.module.ts        
+    users.controller.ts    
+    users.service.ts 
+  main.ts                    
+  app.module.ts           
 ```
 
 ---
@@ -39,23 +36,14 @@ Apliquei o princípio de Single Responsibility:
 
 ---
 
-## Descrição dos Arquivos
 
 ### **main.ts**
 
 Ponto de entrada da aplicação. Aqui inicializo o servidor, habilito CORS para permitir comunicação com o frontend, e configurei o ValidationPipe global para validação automática dos DTOs.
 
-```typescript
-app.useGlobalPipes(new ValidationPipe({
-  whitelist: true,           // Remove propriedades não definidas nos DTOs
-  forbidNonWhitelisted: true, // Retorna erro se houver props extras
-  transform: true,            // Transforma tipos automaticamente
-}));
-```
-
 ### **app.module.ts**
 
-Módulo raiz que centraliza a importação de todos os feature modules. Mantém a estrutura limpa e modular.
+Módulo raiz que centraliza a importação de todos os feature modules.
 
 ### **users.module.ts**
 
@@ -74,7 +62,7 @@ Todos os métodos são assíncronos para manter consistência e preparar o códi
 
 ### **users.service.ts**
 
-Contém a lógica de negócio. Por enquanto, os dados estão em memória (array), mas a estrutura já está preparada para integração com ORM (TypeORM ou Prisma).
+Contém a lógica de negócio. Por enquanto, os dados estão em memória (array), mas a estrutura já está preparada para integração com ORM (TypeORM).
 
 Implementei tratamento de erros com `NotFoundException` para casos onde o usuário não é encontrado.
 
@@ -84,9 +72,6 @@ Representa o modelo de dados do usuário. Optei por usar uma classe ao invés de
 
 - Permite instanciar objetos: `new User(...)`
 - Facilita integração com ORMs
-- Pode conter métodos e lógica interna
-
-O constructor aceita `Partial<User>` para facilitar a criação de instâncias com spread operator.
 
 ### **DTOs (create-user.dto.ts e update-user.dto.ts)**
 
@@ -98,13 +83,6 @@ Utilizei class-validator para validação de dados de entrada:
 Isso garante que dados inválidos sejam rejeitados antes de chegarem ao service.
 
 ---
-
-## Fluxo de uma Requisição
-
-```
-Cliente → Controller → Service → Entity → Response
-         (rotas)     (lógica)   (dados)
-```
 
 **Exemplo: POST /users**
 
@@ -141,42 +119,10 @@ Mesmo trabalhando com dados em memória, implementei todos os métodos como ass�
 
 ## Próximos Passos
 
-Para evoluir esta API, eu sugeriria:
-
-1. **Integração com banco de dados** (TypeORM com PostgreSQL ou Prisma)
+1. **Integração com banco de dados** (TypeORM com PostgreSQL)
 2. **Autenticação JWT** para proteger as rotas
-3. **Paginação** no endpoint GET /users
 4. **Testes unitários** para service e controller
 5. **Documentação Swagger** para facilitar consumo da API
 6. **Variáveis de ambiente** para configurações sensíveis
 
 ---
-
-## Dependências Principais
-
-```json
-{
-  "@nestjs/common": "^10.0.0",
-  "@nestjs/core": "^10.0.0",
-  "class-validator": "^0.14.0",
-  "class-transformer": "^0.5.1"
-}
-```
-
----
-
-## Como Executar
-
-```bash
-# Instalar dependências
-npm install
-
-# Desenvolvimento (com hot reload)
-npm run start:dev
-
-# Produção
-npm run build
-npm run start:prod
-```
-
-A API estará disponível em `http://localhost:3000`
