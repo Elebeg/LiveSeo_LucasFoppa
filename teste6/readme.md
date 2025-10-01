@@ -25,29 +25,28 @@ Motivo: Essa estrutura separa bem as responsabilidades. Os components são peque
 Para o backend, seguiria a estrutura modular do NestJS:
 
     src/
-        modules/           # Módulos da aplicação
-            users/
-                users.controller.ts
-                users.service.ts
-                users.module.ts
-                dto/       
-                entities/ 
-            auth/
-                auth.service.ts
-                auth.controller.ts
-                auth.module.ts
-                guards/ 
-                    auth.guard.ts
-                strategies/
-                    jwt.strategy.ts
-                dto/
-                    login.dto.ts
-                    register.dto.ts       
-            products/
-                products.service.ts
-                products.module.ts
-                products.controller.ts
-                dto/
+        users/
+            users.controller.ts
+            users.service.ts
+            users.module.ts
+            dto/       
+            entities/ 
+        auth/
+            auth.service.ts
+            auth.controller.ts
+            auth.module.ts
+            guards/ 
+                auth.guard.ts
+            strategies/
+                jwt.strategy.ts
+            dto/
+                login.dto.ts
+                register.dto.ts       
+        products/
+            products.service.ts
+            products.module.ts
+            products.controller.ts
+            dto/
         app.module.ts
         main.ts
     .env
