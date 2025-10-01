@@ -1,6 +1,6 @@
-# 📚 Documentação do Backend - API de Usuários
+# Documentação do Backend - API de Usuários
 
-## 🗂️ Estrutura de Arquivos
+## Estrutura de Arquivos
 
 ```
 src/
@@ -22,7 +22,7 @@ src/
 
 ---
 
-## 🎯 Decisões de Arquitetura
+## Decisões de Arquitetura
 
 ### **Padrão Modular**
 
@@ -39,7 +39,7 @@ Apliquei o princípio de Single Responsibility:
 
 ---
 
-## 📄 Descrição dos Arquivos
+## Descrição dos Arquivos
 
 ### **main.ts**
 
@@ -99,7 +99,7 @@ Isso garante que dados inválidos sejam rejeitados antes de chegarem ao service.
 
 ---
 
-## 🔄 Fluxo de uma Requisição
+## Fluxo de uma Requisição
 
 ```
 Cliente → Controller → Service → Entity → Response
@@ -117,7 +117,7 @@ Cliente → Controller → Service → Entity → Response
 
 ---
 
-## ⚡ Por que Async/Await?
+## Async/Await
 
 Mesmo trabalhando com dados em memória, implementei todos os métodos como assíncronos. Isso porque:
 
@@ -127,7 +127,7 @@ Mesmo trabalhando com dados em memória, implementei todos os métodos como ass�
 
 ---
 
-## 🧪 Endpoints Disponíveis
+## Endpoints Disponíveis
 
 | Método | Rota | Descrição | Status de Sucesso |
 |--------|------|-----------|-------------------|
@@ -139,7 +139,7 @@ Mesmo trabalhando com dados em memória, implementei todos os métodos como ass�
 
 ---
 
-## 🚀 Próximos Passos
+## Próximos Passos
 
 Para evoluir esta API, eu sugeriria:
 
@@ -152,7 +152,7 @@ Para evoluir esta API, eu sugeriria:
 
 ---
 
-## 📦 Dependências Principais
+## Dependências Principais
 
 ```json
 {
@@ -165,7 +165,7 @@ Para evoluir esta API, eu sugeriria:
 
 ---
 
-## 🏃 Como Executar
+## Como Executar
 
 ```bash
 # Instalar dependências
