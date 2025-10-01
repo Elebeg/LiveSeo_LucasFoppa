@@ -5,13 +5,6 @@
 Escolhi organizar os arquivos por pastas referente ao seu tipo (html, css e js). Com isso consigo escalar e realizar manutenção no código de forma mais assertiva.
 
 Resolvi fazer um JS simples apenas para interceptar o submit do HTML e fazer algumas mudanças personalizadas que seriam legal de ter em um formulário de cadastro.
-projeto/
-├── html/
-│   └── index.html
-├── css/
-│   └── styles.css
-└── js/
-└── script.js
 
 ---
 
