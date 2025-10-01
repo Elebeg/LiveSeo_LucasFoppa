@@ -1,4 +1,4 @@
-### VUE.JS
+# VUE.JS
 Para o frontend, eu organizaria assim:
 
     public/
@@ -19,9 +19,9 @@ Para o frontend, eu organizaria assim:
     package.json
     vite.config.js
 
-Motivo: Essa estrutura separa bem as responsabilidades. Os components são pequenos e reutilizáveis, as views são as páginas completas, e os services centralizam toda comunicação com o backend, facilitando manutenção.
+### Motivo: Essa estrutura separa bem as responsabilidades. Os components são pequenos e reutilizáveis, as views são as páginas completas, e os services centralizam toda comunicação com o backend, facilitando manutenção.
 
-### NEST.JS
+# NEST.JS
 Para o backend, seguiria a estrutura modular do NestJS:
 
     src/
@@ -53,4 +53,5 @@ Para o backend, seguiria a estrutura modular do NestJS:
     package.json
     tsconfig.json
 
-Motivo: O NestJS já incentiva uma arquitetura modular. Cada módulo (users, products, auth) tem seu próprio controller, service e DTOs, deixando o código organizado por domínio. Isso seria o básico para um backend bem simples. Caso o codigo seja muito grande, provavelmente eu criaria uma pasta commom e colocaria algumas pastas como filters, interceptors e decorators para evitar duplicações nos modulos.
+
+### Motivo: O NestJS já incentiva uma arquitetura modular. Cada módulo (users, products, auth) tem seu próprio controller, service e DTOs, deixando o código organizado por domínio. Isso seria o básico para um backend bem simples. Caso o codigo seja muito grande, provavelmente eu criaria uma pasta commom e colocaria algumas pastas como filters, interceptors e decorators para evitar duplicações nos modulos.
