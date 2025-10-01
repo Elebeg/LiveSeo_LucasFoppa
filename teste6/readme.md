@@ -23,7 +23,7 @@ Motivo: Essa estrutura separa bem as responsabilidades. Os components são peque
 
 ### NEST.JS
 Para o backend, seguiria a estrutura modular do NestJS:
-backend/
+
     src/
         modules/           # Módulos da aplicação
             users/
